@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Server</string>
+    <string name="chat_sever_name">Chat Server</string>
+    <string name="server_senttext_hint">Say Something...</string>
+    <string name="spinner_text">Click here to see client</string>
+    <string name="server_message_sent">Sent to individual user</string>
+    <string name="server_message_sent2">Sent to all user</string>
+    <string name="server_splash_text">Socket Sever Android App</string>
+    <string name="saved_button_text">Save All Chat</string>
+    <string name="clear_button_text">Clear All Chat</string>
+</resources>

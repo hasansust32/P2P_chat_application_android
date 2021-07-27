@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/client_background_gradient"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name_text"
+        android:textColor="#CC0909"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/loginpanelId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/user_edittext_hint"
+            android:textColor="#251801"
+            android:inputType="text"
+            android:textCursorDrawable="@null"
+            android:backgroundTint="#251801"
+            />
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/dstaddress_edittext_hint"
+            android:textColor="#251801"
+            android:inputType="phone"
+            android:textCursorDrawable="@null"
+            android:backgroundTint="#251801"
+            />
+
+        <TextView
+            android:id="@+id/port"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#251801"
+            />
+        <Button
+            android:id="@+id/connect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/connect_button_text"
+            android:background="#94BBCA"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chatpanelId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10sp"
+        android:visibility="gone" >
+
+        <EditText
+            android:id="@+id/say"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/clientchat_edittext_hint"
+            android:textColor="#251801"
+            android:inputType="text"
+            android:textCursorDrawable="@null"
+            android:backgroundTint="#251801"
+            />
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/send_button_text"
+            android:background="#C2DFF0"
+            android:layout_marginBottom="10sp"/>
+        <Button
+            android:id="@+id/disconnect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/disconnect_button_text"
+            android:background="#C2DFF0"
+            android:layout_marginBottom="10sp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15sp"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/savechatmsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/save_chat_log"
+                android:background="#C2DFF0"
+                android:layout_marginRight="5sp"
+                />
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/deletchatemsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/clear_chat_log"
+                android:background="#C2DFF0"
+                android:layout_marginLeft="5sp"
+                />
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/chatmsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#251801"
+                />
+        </ScrollView>
+    </LinearLayout>
+
+
+</LinearLayout>

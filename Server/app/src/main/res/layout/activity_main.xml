@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/server_background_gradient"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/chat_sever_name"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#CC0909"/>
+
+    <TextView
+        android:id="@+id/infoport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:textColor="#251801"/>
+
+    <TextView
+        android:id="@+id/infoip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:textColor="#251801"/>
+
+    <Spinner
+        android:id="@+id/spusers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:tooltipText="@string/spinner_text"
+        />
+
+    <EditText
+        android:layout_marginTop="20sp"
+        android:id="@+id/servertextid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="@string/server_senttext_hint"
+        android:textColor="#251801"
+        android:textCursorDrawable="@null"
+        android:backgroundTint="#251801"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/sentToIndividualUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/server_message_sent"
+            android:background="#E5F1F5"
+            android:layout_marginBottom="10sp"
+            android:layout_marginRight="30sp"/>
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/sentToAllUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/server_message_sent2"
+            android:background="#E5F1F5"
+            android:layout_marginBottom="10sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <Button
+            android:layout_margin="10sp"
+            android:layout_weight="1"
+            android:id="@+id/savedtextid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/saved_button_text"
+            android:background="#E5F1F5"/>
+
+        <Button
+            android:layout_weight="1"
+            android:layout_margin="10sp"
+            android:id="@+id/cleartextid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/clear_button_text"
+            android:background="#E5F1F5"/>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/chatmsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#251801"/>
+    </ScrollView>
+</LinearLayout>

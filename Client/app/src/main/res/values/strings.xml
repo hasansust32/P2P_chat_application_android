@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ClientChat</string>
+    <string name="app_name_text">Chat Client</string>
+    <string name="connect_button_text">Connect...</string>
+    <string name="send_button_text">Send</string>
+    <string name="disconnect_button_text">Disconnect</string>
+    <string name="splash_screen_text">Socket Client Android App</string>
+    <string name="user_edittext_hint">User name</string>
+    <string name="dstaddress_edittext_hint">dstAddress</string>
+    <string name="clientchat_edittext_hint">Say something</string>
+    <string name="save_chat_log">Save ChatLog</string>
+    <string name="clear_chat_log">Clear ChatLog</string>
+</resources>
