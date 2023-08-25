@@ -29,11 +29,11 @@ Extra features:
 # Output of the P2P server application is like this : 
 |Chat Client  |  Server Chatlog | Chat Server   |
 |:---------------:  |:-----------:|:-------:|
-|![Chat Client]|![Server Chatlog]|![Chat Server]  |
+|![Chat_Client]|![Server_Chatlog]|![Chat_Server]  |
 
-[Chat Client]: https://github.com/hasansust32/P2P_chat_application_android/blob/master/Screenshot/clear_button_confirmation.png
-[Server Chatlog]: https://github.com/hasansust32/P2P_chat_application_android/blob/master/Screenshot/server_chatlog.png
-[Chat Server]: https://github.com/hasansust32/P2P_chat_application_android/blob/master/Screenshot/server_save_button_confirmation.png
+[Chat_Client]: https://github.com/hasansust32/P2P_chat_application_android/blob/master/Screenshot/clear_button_confirmation.png
+[Server_Chatlog]: https://github.com/hasansust32/P2P_chat_application_android/blob/master/Screenshot/server_chatlog.png
+[Chat_Server]: https://github.com/hasansust32/P2P_chat_application_android/blob/master/Screenshot/server_save_button_confirmation.png
 
 
 
