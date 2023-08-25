@@ -26,14 +26,6 @@ Extra features:
 3. A Disconnect button (Client side) is provided to notify all of the disconnection of specific clients.
 4. A Button (Clear Chatlog) on both the Server and client sides to find the .txt file holding the chat conversation and delete it. 
 
-# Output of the P2P server application is like this : 
-|Chat Client  |  Server Chatlog | Chat Server   |
-|:---------------:  |:-----------:|:-------:|
-|![Chat_Client]|![Server_Chatlog]|![Chat_Server]  |
-
-[Chat_Client]: https://github.com/hasansust32/P2P_chat_application_android/blob/master/Screenshot/clear_button_confirmation.png
-[Server_Chatlog]: https://github.com/hasansust32/P2P_chat_application_android/blob/master/Screenshot/server_chatlog.png
-[Chat_Server]: https://github.com/hasansust32/P2P_chat_application_android/blob/master/Screenshot/server_save_button_confirmation.png
 
 
 
