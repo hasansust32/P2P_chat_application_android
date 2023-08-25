@@ -1,6 +1,6 @@
 
 
-	********* Project Documentation ********
+	# Project Documentation: 
 
 Here are the two debugged apps (Server and Client). The files are unsigned app. This is not protected by Google playright.
 
