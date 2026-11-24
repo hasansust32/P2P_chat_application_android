@@ -1,41 +1,57 @@
+# LAN Chat for Android (Server and Client Apps)
 
+Two native Android apps written in Java that let several phones on the same Wi-Fi network chat through a central server app over TCP sockets. Built as a university networking project.
 
-	
-Project Documentation:
-======================
+Despite the repository name, the design is **client–server**: one phone runs the server app and every other phone connects to it.
 
-Here are the two debugged apps (Server and Client). The files are unsigned apps. This is not protected by Google playright.
+## Features
 
-Installing process:
-1. Install the .apk
-2. Click the 'anyway continue' option whenever ask to check google playwright protection (Especially for server.apk)
-3. Click the Install button
-3. Click the Google Don't Send button to re-checking Google Play correctly  (Especially for server.apk)
+**Server app**
 
+- Accepts multiple clients on port 8080 and relays messages
+- Broadcast to all users, or message one selected client
+- Drop-down list of connected clients
+- Save the chat log to a `.txt` file in external storage, and clear it
 
-Base features:
-1. Multiple clients can join the network
-2. A Login Panel is displayed for taking the client name and server IP address as input (port address is defined as 8080).
-3. A Textbox with a scroll view is provided for displaying the whole conversation and A send button is also provided to exchange text.
-4. The server has a Button (Send To ALL Users) to send the message to all active clients.
-5. A Spinner is provided to see the connected client list.
-6. A Button (Save All Chat/ Save chatlog) is provided to store the conversation into a .txt file in the external storage.
+**Client app**
 
+- Login screen for display name and server IP address
+- Scrolling conversation view with send button
+- Disconnect button that notifies the other participants
+- Save and clear the local chat log
+- Splash screen and gradient UI
 
-Extra features:
-1. For an Interactive GUI we are using gradient & splash screen.
-2. A Button on the server side (Sent message to individual) is provided to send messages specific to connected clients.
-3. A Disconnect button (Client side) is provided to notify all of the disconnection of specific clients.
-4. A Button (Clear Chatlog) on both the Server and client sides to find the .txt file holding the chat conversation and delete it. 
+| Client login | Client chat | Server chat log |
+|:---:|:---:|:---:|
+| ![Client login](Screenshot/client_loginpanel_page.jpg) | ![Client chat](Screenshot/client_chatpanel_page.png) | ![Server chat log](Screenshot/server_chatlog.png) |
 
+More screenshots are in [`Screenshot/`](Screenshot).
 
-P2P_Features
-=============
-|  Chat Client      |  Server Chatlog | Chat Server   |
-|:---------------:  |:-----------:|:-------:|
-|![Chat_Client]|![Server_Chatlog]|![Chat_Server]  |
+## Tech stack
 
-[Chat_Client]: https://github.com/hasansust32/P2P_chat_application_android/blob/master/Screenshot/clear_button_confirmation.png
-[Server_Chatlog]: https://github.com/hasansust32/P2P_chat_application_android/blob/master/Screenshot/server_chatlog.png
-[Chat_Server]: https://github.com/hasansust32/P2P_chat_application_android/blob/master/Screenshot/server_save_button_confirmation.png
+Java · Android SDK (compile/target SDK 29, minimum SDK 15) · AndroidX AppCompat · `java.net` sockets · Gradle
 
+## Project structure
+
+```text
+├── Server/        # Android Studio project for the server app
+├── Client/        # Android Studio project for the client app
+├── projectApk/    # Prebuilt debug APKs (serverapp-debug.apk, clientapp-debug.apk)
+└── Screenshot/
+```
+
+## Running
+
+**From the prebuilt APKs:** install `projectApk/serverapp-debug.apk` on one device and `clientapp-debug.apk` on the others. They are unsigned debug builds, so Android will warn that they come from an unknown source. Start the server, note its IP address, then enter that address in each client.
+
+**From source:** open `Server/` or `Client/` in Android Studio and run on a device or emulator. All devices must be on the same network.
+
+## Limitations
+
+- Messages are sent in plain text with no authentication.
+- Builds use an older Gradle/Android Gradle Plugin setup and may need upgrading for current Android Studio.
+- No automated tests.
+
+## Author
+
+**S M Mahamudul Hasan** · [GitHub](https://github.com/hasansust32)
